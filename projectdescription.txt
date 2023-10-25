@@ -1,0 +1,71 @@
+Blog post - User creation,user post, 
+When seeing their post can update and delete.
+
+if other post ----> can only view.
+
+
+Project divided into three parts -
+>>>Core ---->>> Views are - "Index", "Info"
+>>>Users ---->>> Views are - "Register", "Login", "Logout", "Account", "User Post"
+>>>Blog Post ----->>> Views are - "Create", "Update", "Delete", "Blog Post"
+
+
+The modals of the project are as follows -
+USERS
+1) Id
+2) Profile Image
+3) Email
+4) Username
+5) Password
+6) Posts
+
+
+BLOG POST
+1) Id
+2) User_id(foreign key)
+3) Date
+4) Title
+5) Text
+
+<--------------------- Steps ------------------------>
+1) "__init__.py" is created for each of the divided folders in puppycompanyblog i.e. 
+    This is created to let python know that these folders can be created.
+    >>>blogpost
+    >>>Core
+    >>>users
+
+2) "views.py" and "forms.py" file are created in "users" and "blogpost" folders.
+3) create "templates" and "static" folder inside puppycompanyblog.
+
+4) __init__.py inside the puppycompanyblog folder will hold most of our organisational logic.
+
+5) the "app.py" will just will do the "app.run(debug=True)" as heavy lifting will be done in the "__init__.py" inside the puppycompanyblog
+
+6) Set up "base.html", "index.html" and "info.html" in templates folder
+7) Set up blueprint of "core" __init__.py of blogpost folder.
+
+8) Create handlers.py (views.py) of "error_pages" folder.
+>>Create a blueprint.
+7) Create a folder error_pages -> "404.html", "403.html" in original templates folder.
+9) Link it in __init__.py folder using register_blueprints
+
+-------------------------------------------------------------
+
+10) Model set up
+
+>>>Set up user model and blogpost model
+>>>Apply appropriate FK.
+>>>In init.py of mypuppycompany import LoginManager from flask_login, then in models add "@login_manager" to check to see in templates if users are actually authenticated. 
+
+---------------------------------------------------------------------
+
+11) User forms - Part 1
+>>> Forms created for :-
+    >LoginForm
+    >RegistrationForm
+    >UpdateUserForm
+
+------------------------------------------------------------------
+12) User Views - Part1
+
+
