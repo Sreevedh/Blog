@@ -3,14 +3,16 @@
 <div class="bg-dark text-white shadow-lg">
     <div align="center">
         <h1>Welcome to the page for {{current_user.username}}</h1>
-        <img align="center" src="{{url_for('static', filename='profile_pics/'+current_user.username)}}" alt="">
+        <img align="center" src="{{url_for('static', filename='profile_pics/'+current_user.profile_image)}}" alt="">
+        <!-- <img align="center" src="{{url_for('static', filename='profile_pics/default_profile.png')}}" alt=""> -->
 
 
     </div>
 </div>
 
 <div class="container">
-    <form method="POST">
+    <!-- if we are uploading any "png" or "jpeg" files we need add action and enctype=multipart/form-data -->
+    <form method="POST" action="" enctype="multipart/form-data">
         {{form.hidden_tag()}}
         <div class="form-group">
             {{form.username.label(class='form-group')}}

@@ -51,4 +51,7 @@ app.register_blueprint(error_pages)
 from puppycompanyblog.users.views import users
 app.register_blueprint(users)
 
+from puppycompanyblog.blogpost.views import blogpost
+app.register_blueprint(blogpost)
+
 
